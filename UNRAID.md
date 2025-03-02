@@ -71,5 +71,5 @@ http://your-unraid-ip:7801
 
 ## Additional Resources
 
-- [SwarmUI GitHub Repository](https://github.com/TheFusion21/SwarmUI)
+- [SwarmUI GitHub Repository](https://github.com/mcmonkeyprojects/SwarmUI)
 - [Unraid Docker Guide](https://wiki.unraid.net/Docker_Guide) 

@@ -1,6 +1,6 @@
 # SwarmUI Docker Hub Integration
 
-This repository is a fork of [TheFusion21/SwarmUI](https://github.com/TheFusion21/SwarmUI) with added Docker Hub integration for easy deployment in Unraid and other container platforms.
+This repository is a fork of [mcmonkeyprojects/SwarmUI](https://github.com/mcmonkeyprojects/SwarmUI) with added Docker Hub integration for easy deployment in Unraid and other container platforms.
 
 ## Pre-built Docker Images
 

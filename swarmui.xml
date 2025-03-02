@@ -7,13 +7,13 @@
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/TheFusion21/SwarmUI/issues</Support>
-  <Project>https://github.com/TheFusion21/SwarmUI</Project>
+  <Support>https://github.com/mcmonkeyprojects/SwarmUI/issues</Support>
+  <Project>https://github.com/mcmonkeyprojects/SwarmUI</Project>
   <Overview>SwarmUI - A user interface for AI image generation</Overview>
   <Category>Productivity: Tools:</Category>
   <WebUI>http://[IP]:[PORT:7801]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/TheFusion21/SwarmUI/main/swarmui.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/TheFusion21/SwarmUI/main/icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/mcmonkeyprojects/SwarmUI/master/swarmui.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/mcmonkeyprojects/SwarmUI/master/icon.png</Icon>
   <ExtraParams>--runtime=nvidia</ExtraParams>
   <PostArgs/>
   <CPUset/>

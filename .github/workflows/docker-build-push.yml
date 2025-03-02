@@ -6,10 +6,10 @@ on:
     - cron: '0 0 * * *'
   # Allow manual triggering
   workflow_dispatch:
-  # Run on push to main branch
+  # Run on push to master branch
   push:
     branches:
-      - main
+      - master
 
 jobs:
   sync-with-upstream:
@@ -22,14 +22,14 @@ jobs:
           
       - name: Add upstream remote
         run: |
-          git remote add upstream https://github.com/TheFusion21/SwarmUI.git
+          git remote add upstream https://github.com/mcmonkeyprojects/SwarmUI.git
           git fetch upstream
           
       - name: Sync with upstream
         run: |
-          git checkout main
-          git merge upstream/main --no-edit
-          git push origin main
+          git checkout master
+          git merge upstream/master --no-edit
+          git push origin master
 
   docker-build-push:
     needs: sync-with-upstream
@@ -38,7 +38,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          ref: main
+          ref: master
           
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2

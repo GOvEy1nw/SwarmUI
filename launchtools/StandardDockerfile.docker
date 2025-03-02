@@ -6,7 +6,7 @@ ARG GID=1000
 # Add labels for Unraid container template
 LABEL maintainer="SwarmUI"
 LABEL org.opencontainers.image.description="SwarmUI - A user interface for AI image generation"
-LABEL org.opencontainers.image.source="https://github.com/TheFusion21/SwarmUI"
+LABEL org.opencontainers.image.source="https://github.com/mcmonkeyprojects/SwarmUI"
 
 # Install python
 RUN apt update
