@@ -7,10 +7,8 @@ This repository is a fork of [mcmonkeyprojects/SwarmUI](https://github.com/mcmon
 Pre-built Docker images are available on Docker Hub at:
 
 ```
-yourusername/swarmui:latest
+govey1nw/swarmui:latest
 ```
-
-Replace `yourusername` with your actual Docker Hub username.
 
 ## Automatic Updates
 
