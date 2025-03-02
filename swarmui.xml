@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>swarmui</Name>
+  <Repository>swarmui/swarmui</Repository>
+  <Registry>https://hub.docker.com/r/swarmui/swarmui/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/TheFusion21/SwarmUI/issues</Support>
+  <Project>https://github.com/TheFusion21/SwarmUI</Project>
+  <Overview>SwarmUI - A user interface for AI image generation</Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:7801]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/TheFusion21/SwarmUI/main/swarmui.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/TheFusion21/SwarmUI/main/icon.png</Icon>
+  <ExtraParams>--runtime=nvidia</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1684267264</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI" Target="7801" Default="7801" Mode="tcp" Description="Web UI Port" Type="Port" Display="always" Required="true" Mask="false">7801</Config>
+  <Config Name="Data" Target="/SwarmUI/Data" Default="/mnt/user/appdata/swarmui/data" Mode="rw" Description="SwarmUI data directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/swarmui/data</Config>
+  <Config Name="Backend" Target="/SwarmUI/dlbackend" Default="/mnt/user/appdata/swarmui/dlbackend" Mode="rw" Description="SwarmUI backend directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/swarmui/dlbackend</Config>
+  <Config Name="DL Nodes" Target="/SwarmUI/src/BuiltinExtensions/ComfyUIBackend/DLNodes" Default="/mnt/user/appdata/swarmui/dlnodes" Mode="rw" Description="SwarmUI DL nodes directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/swarmui/dlnodes</Config>
+  <Config Name="Models" Target="/SwarmUI/Models" Default="/mnt/user/appdata/swarmui/models" Mode="rw" Description="SwarmUI models directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/swarmui/models</Config>
+  <Config Name="Output" Target="/SwarmUI/Output" Default="/mnt/user/appdata/swarmui/output" Mode="rw" Description="SwarmUI output directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/swarmui/output</Config>
+  <Config Name="Workflows" Target="/SwarmUI/src/BuiltinExtensions/ComfyUIBackend/CustomWorkflows" Default="/mnt/user/appdata/swarmui/workflows" Mode="rw" Description="SwarmUI custom workflows directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/swarmui/workflows</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="Timezone" Target="TZ" Default="America/New_York" Mode="" Description="Timezone" Type="Variable" Display="advanced" Required="false" Mask="false">America/New_York</Config>
+</Container> 

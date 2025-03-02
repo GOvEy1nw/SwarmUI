@@ -1,6 +1,12 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0-bookworm-slim
 
 ARG UID=1000
+ARG GID=1000
+
+# Add labels for Unraid container template
+LABEL maintainer="SwarmUI"
+LABEL org.opencontainers.image.description="SwarmUI - A user interface for AI image generation"
+LABEL org.opencontainers.image.source="https://github.com/TheFusion21/SwarmUI"
 
 # Install python
 RUN apt update
@@ -9,13 +15,24 @@ RUN apt install -y git wget build-essential python3.11 python3.11-venv python3.1
 # Install dependencies for controlnet preprocessors
 RUN apt install -y libglib2.0-0 libgl1
 
+# Create a non-root user to run the application
+RUN groupadd -g $GID swarmuser && \
+    useradd -u $UID -g $GID -m swarmuser
+
 # Copy swarm's files into the docker container
 COPY . ./SwarmUI
 
-RUN chown -R $UID:$UID ./SwarmUI
+# Set ownership of the application files
+RUN chown -R $UID:$GID ./SwarmUI
 
 # Stupidproofing on git calls from inside docker
 RUN git config --global --add safe.directory '*'
+
+# Create directories for bind mounts
+RUN mkdir -p /SwarmUI/Data /SwarmUI/dlbackend /SwarmUI/src/BuiltinExtensions/ComfyUIBackend/DLNodes \
+    /SwarmUI/Models /SwarmUI/Output /SwarmUI/src/BuiltinExtensions/ComfyUIBackend/CustomWorkflows && \
+    chown -R $UID:$GID /SwarmUI/Data /SwarmUI/dlbackend /SwarmUI/src/BuiltinExtensions/ComfyUIBackend/DLNodes \
+    /SwarmUI/Models /SwarmUI/Output /SwarmUI/src/BuiltinExtensions/ComfyUIBackend/CustomWorkflows
 
 # Expose the port for other containers (to use Swarm as an API if you want)
 EXPOSE 7801

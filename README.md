@@ -28,7 +28,7 @@ Key feature targets not yet implemented:
 - LLM-assisted prompting (there's an extension for it, but LLM control should be natively supported)
 - convenient direct-distribution of Swarm as a program ([Tauri](https://tauri.app/), [Blazor Desktop](https://learn.microsoft.com/en-us/training/modules/build-blazor-hybrid/), or an Electron app?)
 
-# Try It On Google Colab or Runpod
+# Try It On Google Colab, Runpod, Docker, or Unraid
 
 ### Google Colab
 
@@ -41,6 +41,20 @@ Colab link if you want to try Swarm: https://colab.research.google.com/github/mc
 Runpod template (note: maintained by third party contributor [nerdylive123](https://github.com/nerdylive123)): https://runpod.io/console/deploy?template=u7mlkrmxq3&ref=c6jd6jj0
 
 Note it may take several minutes to start up the first time. Check the container logs to see setup progress. Check the template `?` info for hints on how to use.
+
+### Docker
+
+You can run SwarmUI using Docker with the provided docker-compose.yml file:
+
+```bash
+docker-compose up -d
+```
+
+For more details on Docker usage, see the [Docker documentation](docker-compose.yml).
+
+### Unraid
+
+For Unraid users, we provide a pre-built Docker container and detailed setup instructions. See [UNRAID.md](UNRAID.md) for more information.
 
 # Installing on Windows
 
